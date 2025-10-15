@@ -1,44 +1,67 @@
 public class Produto {
-    private String Nome, Categoria;
-    private double Preco;
-    private int QuantDeEstoque;
-    
-    public Produto(String nome, String categoria,double preco, int quantDeEstoque){
-        this.Nome = nome;
-        this.Categoria = categoria;
-        this.Preco = preco;
-        this.QuantDeEstoque = quantDeEstoque;
+    private int id;
+    private String nome;
+    private String categoria;
+    private double preco;
+    private int quantDeEstoque;
+
+    public Produto(String nome, String categoria, double preco, int quantDeEstoque) {
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.quantDeEstoque = quantDeEstoque;
     }
 
-    public String getNome(){
-        return Nome;
-    }
-    public void setNome(String nome){
-        this.Nome = nome;
-    }
-
-    public String getCategoria(){
-        return Categoria;
-    }
-    public void setCategoria(String categoria){
-        this.Categoria = categoria;
+    public Produto(int id, String nome, String categoria, double preco, int quantDeEstoque) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.quantDeEstoque = quantDeEstoque;
     }
 
-    public double getPreco(){
-        return Preco;
-    }
-    public void setPreco(double preco){
-        this.Preco = preco;
+    public String getNome() {
+        return nome;
     }
 
-    public int getQuantDeEstoque(){
-        return QuantDeEstoque;
-    }
-    public void setQuantDeEstoque(int quantDeEstoque){
-        this.QuantDeEstoque = quantDeEstoque;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String toString(){
-        return "Produto -> " + "nome =" + Nome + " , categoria =" + Categoria + " , preco = R$" + Preco + " , quantDeEstoque = " + QuantDeEstoque + " .";
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantDeEstoque() {
+        return quantDeEstoque;
+    }
+
+    public void setQuantDeEstoque(int quantDeEstoque) {
+        this.quantDeEstoque = quantDeEstoque;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto -> nome =" + nome + " , categoria =" + categoria + " , preco = R$" + preco + " , quantDeEstoque = " + quantDeEstoque + " .";
     }
 }

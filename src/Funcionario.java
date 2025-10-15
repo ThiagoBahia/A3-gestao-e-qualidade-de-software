@@ -1,8 +1,15 @@
 public class Funcionario {
+    private int id;
     private String nome;
     private String cpf;
     
     public Funcionario(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
+    public Funcionario(int id, String nome, String cpf) {
+        this.id = id;
         this.nome = nome;
         this.cpf = cpf;
     }
@@ -22,5 +29,13 @@ public class Funcionario {
     
     public String getCpf() {
         return cpf;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
